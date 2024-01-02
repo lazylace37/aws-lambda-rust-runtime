@@ -73,7 +73,7 @@ use response::ResponseFuture;
 mod deserializer;
 pub mod ext;
 pub mod request;
-mod response;
+pub mod response;
 pub use crate::{
     ext::{RequestExt, RequestPayloadExt},
     response::IntoResponse,
