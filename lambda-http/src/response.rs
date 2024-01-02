@@ -50,7 +50,7 @@ pub enum LambdaResponse {
 
 /// Transformation from http type to internal type
 impl LambdaResponse {
-    pub(crate) fn from_response(request_origin: &RequestOrigin, value: Response<Body>) -> Self {
+    pub fn from_response(request_origin: &RequestOrigin, value: Response<Body>) -> Self {
         let (parts, bod) = value.into_parts();
         let (is_base64_encoded, body) = match bod {
             Body::Empty => (false, None),
